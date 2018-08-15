@@ -57,8 +57,14 @@
         //     hasBingo = true;
         //   }
         // }
-        
-        return this.diagionalBingo
+        const diagional = [];
+        for (let i=0; i < this.columns; i++) {
+          diagional.push(this.listOfAllRows[i][i].name);
+        }
+
+        const match = intersection(diagional, this.selected);
+        return match.length == this.columns;
+        // return this.diagionalBingo;
       }
     },
     methods: {
@@ -80,8 +86,8 @@
         }
 
         const match = intersection(diagional, this.selected);
-        // debugger;
-        return match.length == this.columns;
+        debugger;
+        return match.length === this.columns;
       }
     }
   }
