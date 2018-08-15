@@ -49,6 +49,7 @@
       hasBingo() {
         const allRows = this.listOfAllRows;
 
+        ////////////// row ///////////////
         for (let i=0; i < this.columns; i++) {
           const row = allRows[i],
                 rowNames = row.map(obj => obj.name),
@@ -58,16 +59,45 @@
             return true;
           }
         }
-        // debugger;
-        const diagional = [];
+
+
+        ////////// diagonal (L->R) ////////////
+        const diagLeft = [];
         for (let i=0; i < this.columns; i++) {
-          diagional.push(this.listOfAllRows[i][i].name);
+          diagLeft.push(this.listOfAllRows[i][i].name);
         }
 
-        const diagMatch = intersection(diagional, this.selected);
-        if (diagMatch.length === this.columns) {
+        const diagLeftMatch = intersection(diagLeft, this.selected);
+        if (diagLeftMatch.length === this.columns) {
           return true;
         }
+
+
+        ////////// diagonal (R->L) ////////////
+        const diagRight = [];
+
+        for (let i=this.columns-1, rowCount=0; i >= 0; i--, rowCount++) {
+          const square = this.listOfAllRows[rowCount][i];
+          diagRight.push(square.name);
+        }
+
+        const diagRightMatch = intersection(diagRight, this.selected);
+        if (diagRightMatch.length === this.columns) {
+          return true;
+        }
+
+
+        // const diagRightMatch = intersection(diagRight, this.selected);
+        // if (diagRightMatch.length === this.columns) {
+        //   return true;
+        // }
+        // debugger;
+
+
+        ///////////// column //////////////
+        // for (let i=0; i < this.columns; i++) {
+        //   const column =
+        // }
 
 
         return false;
