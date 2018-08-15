@@ -24,9 +24,9 @@
 
 <style>
   button {
-    box-sizing: border-box;
-    display: flex;
-    width: 20%;
+    /* box-sizing: border-box; */
+    /* display: flex; */
+    width: 150px;
     height: 150px;
     padding: 10px;
     font-size: 16px;
