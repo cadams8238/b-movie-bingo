@@ -2,32 +2,12 @@
   <div>
     <h1>B-Movie Bingo</h1>
     <section>
-      <Square v-for="square in bingoCardSquares" :key="square" :label="square.name" />
-      <!-- <Square label="Beefcake"/>
-      <Square label="High fall"/>
-      <Square label="Foot chase"/>
-      <Square label="Laser"/>
-      <Square label="Loved one injured or killed"/>
-      <Square label="Oiled up"/>
-      <Square label="Impaled, stabbed, or shot with arrow"/>
-      <Square label="'We had a deal'"/>
-      <Square label="Climbing or sneaking"/>
-      <Square label="Car bomb"/>
-      <Square label="Chewed out by chief"/>
-      <Square label="Suspended from force"/>
-      <Square label="BLANK SQUARE"/>
-      <Square label="Lone wolf attitude"/>
-      <Square label="T'n'A"/>
-      <Square label="Pointless flip"/>
-      <Square label="Drug or arms smuggling plot"/>
-      <Square label="Dream sequence"/>
-      <Square label="Training montage"/>
-      <Square label="Villian in a white suit"/>
-      <Square label="Eating shit"/>
-      <Square label="Drive through mall or building"/>
-      <Square label="Long boring scene"/>
-      <Square label="Awesome silhouette"/>
-      <Square label="Wasting food"/> -->
+      <Square v-for="square in bingoCardSquares"
+        :key="square"
+        :label="square.name"
+        :isSelected="isSelected(square)"
+        @highlightButton="select"
+      />
     </section>
   </div>
 </template>
@@ -36,13 +16,33 @@
 <script>
   import Square from './square';
   import bingoCardSquares from '../../../algorithm';
+  import includes from 'lodash/includes';
+  import difference from 'lodash/difference';
+
 
   export default {
     data() {
-      return { bingoCardSquares }
+      return {
+        bingoCardSquares,
+        selected: []
+      };
     },
     components: {
       Square
+    },
+    methods: {
+      select(square) {
+        if (this.isSelected(square)) {
+          this.selected = difference(this.selected, [square]); // diff (array to be modified, item to remove)
+        }
+        else {
+          this.selected.push(square);
+        }
+        console.log(this.selected);
+      },
+      isSelected(square) {
+        return includes(this.selected, square); // inc (array to check, is this value in array?)
+      }
     }
   }
 </script>
@@ -60,4 +60,5 @@
     justify-content: center;
     flex-wrap: wrap;
   }
+
 </style>

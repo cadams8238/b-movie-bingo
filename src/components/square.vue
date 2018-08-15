@@ -1,13 +1,26 @@
 <template>
-  <button>{{ label }}</button>
+  <button
+    key="key"
+    class="isSelected ? selected : ''"
+    @click="buttonClick"
+  >
+    {{ label }}
+  </button>
 </template>
 
 
 <script>
   export default {
     props: [
-      'label'
-    ]
+      'key',
+      'label',
+      'isSelected'
+    ],
+    methods: {
+      buttonClick() {
+        this.$emit('highlightButton', this.key)
+      }
+    }
   }
 </script>
 
@@ -25,4 +38,9 @@
   button:hover {
     cursor: pointer;
   }
+
+  .selected {
+    background-color: aqua;
+  }
+
 </style>
