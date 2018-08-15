@@ -2,7 +2,8 @@
   <div>
     <h1>B-Movie Bingo</h1>
     <section>
-      <Square label="Beefcake"/>
+      <Square v-for="square in bingoCardSquares" :key="square" :label="square.name" />
+      <!-- <Square label="Beefcake"/>
       <Square label="High fall"/>
       <Square label="Foot chase"/>
       <Square label="Laser"/>
@@ -26,7 +27,7 @@
       <Square label="Drive through mall or building"/>
       <Square label="Long boring scene"/>
       <Square label="Awesome silhouette"/>
-      <Square label="Wasting food"/>
+      <Square label="Wasting food"/> -->
     </section>
   </div>
 </template>
@@ -34,8 +35,12 @@
 
 <script>
   import Square from './square';
+  import bingoCardSquares from '../../../algorithm';
 
   export default {
+    data() {
+      return { bingoCardSquares }
+    },
     components: {
       Square
     }
@@ -47,7 +52,7 @@
   h1 {
     text-align: center;
   }
-  
+
   section {
     width: 750px;
     margin: 0 auto;
