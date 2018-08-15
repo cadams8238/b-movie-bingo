@@ -33,6 +33,7 @@
         bingoCardSquares,
         selected: [],
         columns: 5
+        // squareNames: this.justNames
       };
     },
     components: {
@@ -46,24 +47,35 @@
         return slice(this.listOfAllRows, 0, this.columns);
       },
       hasBingo() {
-        // let hasBingo = false,
-        //     allRows = this.listOfAllRows;
-        //
-        // for (let i=0; i < this.columns; i++) {
-        //   const row = allRows[i],
-        //         match = intersection(row, this.selected);
-        //
-        //   if (match.length === this.columns) {
-        //     hasBingo = true;
-        //   }
-        // }
+        const allRows = this.listOfAllRows;
+
+        for (let i=0; i < this.columns; i++) {
+          const row = allRows[i],
+                rowNames = row.map(obj => obj.name),
+                match = intersection(rowNames, this.selected);
+
+          if (match.length === this.columns) {
+            return true;
+          }
+        }
+        // debugger;
         const diagional = [];
         for (let i=0; i < this.columns; i++) {
           diagional.push(this.listOfAllRows[i][i].name);
         }
 
-        const match = intersection(diagional, this.selected);
-        return match.length == this.columns;
+        const diagMatch = intersection(diagional, this.selected);
+        if (diagMatch.length === this.columns) {
+          return true;
+        }
+
+
+        return false;
+
+
+
+
+
         // return this.diagionalBingo;
       }
     },
@@ -79,6 +91,13 @@
       isSelected(square) {
         return includes(this.selected, square); // inc (array to check, is this value in array?)
       },
+      // justNames() {
+      //   const namesOfSquares = [];
+      //   for (let i = 0; i < this.bingoCardSquares; i++) {
+      //     namesOfSquares.push(bingoCardSquares[i].name)
+      //   }
+      //   return namesOfSquares;
+      // },
       diagionalBingo() {
         const diagional = [];
         for (let i=0; i < this.columns; i++) {
