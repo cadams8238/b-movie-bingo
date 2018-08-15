@@ -3,9 +3,9 @@
     <h1>B-Movie Bingo</h1>
     <section>
       <Square v-for="square in bingoCardSquares"
-        :key="square"
+        :key="square.name"
         :label="square.name"
-        :isSelected="isSelected(square)"
+        :class="isSelected(square.name) ? 'selected' : ''"
         @highlightButton="select"
       />
     </section>
@@ -32,6 +32,8 @@
     },
     methods: {
       select(square) {
+        console.log(square);
+
         if (this.isSelected(square)) {
           this.selected = difference(this.selected, [square]); // diff (array to be modified, item to remove)
         }

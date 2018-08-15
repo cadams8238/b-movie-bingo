@@ -1,7 +1,5 @@
 <template>
   <button
-    key="key"
-    class="isSelected ? selected : ''"
     @click="buttonClick"
   >
     {{ label }}
@@ -12,13 +10,12 @@
 <script>
   export default {
     props: [
-      'key',
-      'label',
-      'isSelected'
+      'label'
+      // 'isSelected'
     ],
     methods: {
       buttonClick() {
-        this.$emit('highlightButton', this.key)
+        this.$emit('highlightButton', this.label)
       }
     }
   }
