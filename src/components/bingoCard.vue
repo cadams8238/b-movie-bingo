@@ -46,6 +46,15 @@
       rows() {
         return slice(this.listOfAllRows, 0, this.columns);
       },
+      // diagionalBingo() {
+      //   const diagional = [];
+      //   for (let i=0; i < this.columns; i++) {
+      //     diagional.push(this.listOfAllRows[i][i].name);
+      //   }
+      //
+      //   const match = intersection(diagional, this.selected);
+      //   return match.length === this.columns;
+      // },
       hasBingo() {
         const allRows = this.listOfAllRows;
 
@@ -99,7 +108,7 @@
 
         return false;
 
-        // return this.diagionalBingo;
+        // return this.diagionalBingo();
       }
     },
     methods: {
@@ -121,16 +130,7 @@
       //   }
       //   return namesOfSquares;
       // },
-      diagionalBingo() {
-        const diagional = [];
-        for (let i=0; i < this.columns; i++) {
-          diagional.push(this.listOfAllRows[i][i].name);
-        }
 
-        const match = intersection(diagional, this.selected);
-        debugger;
-        return match.length === this.columns;
-      }
     }
   }
 </script>
@@ -144,9 +144,12 @@
   section {
     width: 750px;
     margin: 0 auto;
-    /* display: flex;
-    justify-content: center;
-    flex-wrap: wrap; */
+    display: flex;
+    align-items: center;
+  }
+
+  div {
+    margin: 0;
   }
 
 </style>
