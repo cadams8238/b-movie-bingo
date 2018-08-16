@@ -34,7 +34,6 @@
         bingoCardSquares,
         selected: [],
         columns: 5
-        // squareNames: this.justNames
       };
     },
     components: {
@@ -94,7 +93,6 @@
         ));
       },
       hasBingo() {
-        const allRows = this.listOfAllRows;
         const reducer = (sum, value) => sum + value;
 
         if (reduce(this.isDiagBingo, reducer, 0) >= 1 ||
@@ -102,12 +100,6 @@
             reduce(this.isColBingo, reducer, 0) >= 1) {
           return true;
         }
-        // else if (reduce(this.isRowBingo, reducer, 0) >= 1) {
-        //   return true;
-        // }
-        // else if (reduce(this.isColBingo, reducer, 0) >= 1) {
-        //   return true;
-        // }
         return false;
       }
     },
