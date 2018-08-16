@@ -106,60 +106,7 @@
         else if (reduce(this.isColBingo, reducer, 0) >= 1) {
           return true;
         }
-
-        ////////////// row ///////////////
-        // for (let i=0; i < this.columns; i++) {
-        //   const row = allRows[i],
-        //         rowNames = row.map(obj => obj.name),
-        //         match = intersection(rowNames, this.selected);
-        //
-        //   if (match.length === this.columns) {
-        //     return true;
-        //   }
-        // }
-
-
-        ////////// diagonal (L->R) ////////////
-        // const diagLeft = [];
-        // for (let i=0; i < this.columns; i++) {
-        //   diagLeft.push(this.listOfAllRows[i][i].name);
-        // }
-
-        // const diagLeftMatch = intersection(diagLeft, this.selected);
-        // if (diagLeftMatch.length === this.columns) {
-        //   return true;
-        // }
-
-
-
-
-        ////////// diagonal (R->L) ////////////
-        // const diagRight = [];
-        //
-        // for (let i=this.columns-1, rowCount=0; i >= 0; i--, rowCount++) {
-        //   const square = this.listOfAllRows[rowCount][i];
-        //   diagRight.push(square.name);
-        // }
-        //
-        // const diagRightMatch = intersection(diagRight, this.selected);
-        // if (diagRightMatch.length === this.columns) {
-        //   return true;
-        // }
-
-
-        ///////////// column //////////////
-        // for (let i=0; i < this.columns; i++) {
-        //   const column = allRows.map(row => row[i].name)
-        //
-        //   const colMatch = intersection(column, this.selected);
-        //   if (colMatch.length === this.columns) {
-        //     return true;
-        //   }
-        // }
-
         return false;
-
-        // return this.diagionalBingo();
       }
     },
     methods: {
@@ -173,15 +120,7 @@
       },
       isSelected(square) {
         return includes(this.selected, square); // inc (array to check, is this value in array?)
-      },
-      // justNames() {
-      //   const namesOfSquares = [];
-      //   for (let i = 0; i < this.bingoCardSquares; i++) {
-      //     namesOfSquares.push(bingoCardSquares[i].name)
-      //   }
-      //   return namesOfSquares;
-      // },
-
+      }
     }
   }
 </script>
