@@ -54,17 +54,30 @@
         for (let i=0; i < this.columns; i++) {
           leftDiag.push(this.listOfAllRows[i][i].name);
         }
-
         for (let i=this.columns-1, rowCount=0; i >= 0; i--, rowCount++) {
           const square = this.listOfAllRows[rowCount][i];
           rightDiag.push(square.name);
         }
-        // const test = [leftDiag, rightDiag];
-        // debugger;
         return [leftDiag, rightDiag];
       },
       isDiagBingo() {
-        return this.diagionalSquares.map(diag => intersection(diag, this.selected).length === this.columns ? 1 : 0);
+        return this.diagionalSquares.map(diag => (
+          intersection(diag, this.selected).length === this.columns ? 1 : 0
+        ));
+      },
+      rowSquares() {
+        const rows = [];
+        for (let i=0; i < this.columns; i++) {
+          const row = this.listOfAllRows[i],
+                rowNames = row.map(obj => obj.name);
+          rows.push(rowNames);
+        }
+        return rows;
+      },
+      isRowBingo() {
+        return this.rowSquares.map(row => (
+          intersection(row, this.selected).length === this.columns ? 1 : 0
+        ));
       },
       hasBingo() {
         const allRows = this.listOfAllRows;
@@ -73,17 +86,20 @@
         if (reduce(this.isDiagBingo, reducer, 0) >= 1) {
           return true;
         }
+        else if (reduce(this.isRowBingo, reducer, 0) >= 1) {
+          return true;
+        }
 
         ////////////// row ///////////////
-        for (let i=0; i < this.columns; i++) {
-          const row = allRows[i],
-                rowNames = row.map(obj => obj.name),
-                match = intersection(rowNames, this.selected);
-
-          if (match.length === this.columns) {
-            return true;
-          }
-        }
+        // for (let i=0; i < this.columns; i++) {
+        //   const row = allRows[i],
+        //         rowNames = row.map(obj => obj.name),
+        //         match = intersection(rowNames, this.selected);
+        //
+        //   if (match.length === this.columns) {
+        //     return true;
+        //   }
+        // }
 
 
         ////////// diagonal (L->R) ////////////
@@ -155,9 +171,8 @@
 
 
 <style scoped>
-  h1 {
+  h1, h3 {
     text-align: center;
-    display: block;
   }
 
   section {
