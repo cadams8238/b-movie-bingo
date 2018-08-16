@@ -87,24 +87,17 @@
         }
 
 
-        // const diagRightMatch = intersection(diagRight, this.selected);
-        // if (diagRightMatch.length === this.columns) {
-        //   return true;
-        // }
-        // debugger;
-
-
         ///////////// column //////////////
-        // for (let i=0; i < this.columns; i++) {
-        //   const column =
-        // }
+        for (let i=0; i < this.columns; i++) {
+          const column = allRows.map(row => row[i].name)
 
+          const colMatch = intersection(column, this.selected);
+          if (colMatch.length === this.columns) {
+            return true;
+          }
+        }
 
         return false;
-
-
-
-
 
         // return this.diagionalBingo;
       }
@@ -112,7 +105,7 @@
     methods: {
       select(square) {
         if (this.isSelected(square)) {
-          this.selected = difference(this.selected, [square]); // diff (array to be modified, item to remove)
+          this.selected = difference(this.selected, [square]); // diff (array to be modified, item to remove- needs to be array)
         }
         else {
           this.selected.push(square);
