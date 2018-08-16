@@ -1,8 +1,8 @@
 <template>
   <div>
     <h1>B-Movie Bingo</h1>
+    <h3 v-show="hasBingo">BINGO</h3>
     <section>
-      <h3 v-show="hasBingo">BINGO</h3>
       <div v-for="(row, i) in rows" :key="i">
         <Square v-for="square in row"
           :key="square.name"
@@ -24,6 +24,7 @@
   import chunk from 'lodash/chunk';
   import slice from 'lodash/slice';
   import intersection from 'lodash/intersection';
+  import reduce from 'lodash/reduce';
 
 
 
@@ -46,17 +47,32 @@
       rows() {
         return slice(this.listOfAllRows, 0, this.columns);
       },
-      // diagionalBingo() {
-      //   const diagional = [];
-      //   for (let i=0; i < this.columns; i++) {
-      //     diagional.push(this.listOfAllRows[i][i].name);
-      //   }
-      //
-      //   const match = intersection(diagional, this.selected);
-      //   return match.length === this.columns;
-      // },
+      diagionalSquares() {
+        const leftDiag = [],
+              rightDiag = [];
+
+        for (let i=0; i < this.columns; i++) {
+          leftDiag.push(this.listOfAllRows[i][i].name);
+        }
+
+        for (let i=this.columns-1, rowCount=0; i >= 0; i--, rowCount++) {
+          const square = this.listOfAllRows[rowCount][i];
+          rightDiag.push(square.name);
+        }
+        // const test = [leftDiag, rightDiag];
+        // debugger;
+        return [leftDiag, rightDiag];
+      },
+      isDiagBingo() {
+        return this.diagionalSquares.map(diag => intersection(diag, this.selected).length === this.columns ? 1 : 0);
+      },
       hasBingo() {
         const allRows = this.listOfAllRows;
+        const reducer = (sum, value) => sum + value;
+
+        if (reduce(this.isDiagBingo, reducer, 0) >= 1) {
+          return true;
+        }
 
         ////////////// row ///////////////
         for (let i=0; i < this.columns; i++) {
@@ -71,29 +87,31 @@
 
 
         ////////// diagonal (L->R) ////////////
-        const diagLeft = [];
-        for (let i=0; i < this.columns; i++) {
-          diagLeft.push(this.listOfAllRows[i][i].name);
-        }
+        // const diagLeft = [];
+        // for (let i=0; i < this.columns; i++) {
+        //   diagLeft.push(this.listOfAllRows[i][i].name);
+        // }
 
-        const diagLeftMatch = intersection(diagLeft, this.selected);
-        if (diagLeftMatch.length === this.columns) {
-          return true;
-        }
+        // const diagLeftMatch = intersection(diagLeft, this.selected);
+        // if (diagLeftMatch.length === this.columns) {
+        //   return true;
+        // }
+
+
 
 
         ////////// diagonal (R->L) ////////////
-        const diagRight = [];
-
-        for (let i=this.columns-1, rowCount=0; i >= 0; i--, rowCount++) {
-          const square = this.listOfAllRows[rowCount][i];
-          diagRight.push(square.name);
-        }
-
-        const diagRightMatch = intersection(diagRight, this.selected);
-        if (diagRightMatch.length === this.columns) {
-          return true;
-        }
+        // const diagRight = [];
+        //
+        // for (let i=this.columns-1, rowCount=0; i >= 0; i--, rowCount++) {
+        //   const square = this.listOfAllRows[rowCount][i];
+        //   diagRight.push(square.name);
+        // }
+        //
+        // const diagRightMatch = intersection(diagRight, this.selected);
+        // if (diagRightMatch.length === this.columns) {
+        //   return true;
+        // }
 
 
         ///////////// column //////////////
@@ -139,6 +157,7 @@
 <style scoped>
   h1 {
     text-align: center;
+    display: block;
   }
 
   section {
@@ -148,7 +167,7 @@
     align-items: center;
   }
 
-  div {
+  section div {
     margin: 0;
   }
 
