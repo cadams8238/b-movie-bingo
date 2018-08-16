@@ -79,6 +79,20 @@
           intersection(row, this.selected).length === this.columns ? 1 : 0
         ));
       },
+      columnSquares() {
+        const columns = [];
+        for (let i=0; i < this.columns; i++) {
+          const column = this.listOfAllRows.map(row => row[i].name)
+
+          columns.push(column);
+        }
+        return columns;
+      },
+      isColBingo() {
+        return this.columnSquares.map(col => (
+          intersection(col, this.selected).length === this.columns ? 1 : 0
+        ));
+      },
       hasBingo() {
         const allRows = this.listOfAllRows;
         const reducer = (sum, value) => sum + value;
@@ -87,6 +101,9 @@
           return true;
         }
         else if (reduce(this.isRowBingo, reducer, 0) >= 1) {
+          return true;
+        }
+        else if (reduce(this.isColBingo, reducer, 0) >= 1) {
           return true;
         }
 
@@ -131,14 +148,14 @@
 
 
         ///////////// column //////////////
-        for (let i=0; i < this.columns; i++) {
-          const column = allRows.map(row => row[i].name)
-
-          const colMatch = intersection(column, this.selected);
-          if (colMatch.length === this.columns) {
-            return true;
-          }
-        }
+        // for (let i=0; i < this.columns; i++) {
+        //   const column = allRows.map(row => row[i].name)
+        //
+        //   const colMatch = intersection(column, this.selected);
+        //   if (colMatch.length === this.columns) {
+        //     return true;
+        //   }
+        // }
 
         return false;
 
