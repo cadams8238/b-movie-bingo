@@ -1,7 +1,19 @@
 <template>
   <div>
     <h1>B-Movie Bingo</h1>
-    <h3 v-show="hasBingo">BINGO</h3>
+    <div v-show="hasBingo"
+      class="bingoOverlay"
+    >
+      <div>
+        <h3>You got a Bingo!</h3>
+        <button class="continue"
+          @click=""
+        >
+          Continue
+        </button>
+        <button class="again">New game</button>
+      </div>
+    </div>
     <section>
       <div v-for="(row, i) in rows" :key="i">
         <Square v-for="square in row"
@@ -135,15 +147,18 @@
 
 
 <style scoped>
-  h1 {
+  h1, h3 {
     margin-top: 0;
     padding-top: 20px;
     font-family: 'Bungee Inline', sans-serif;
     color: #cc7420;
+    text-align: center;
+
   }
 
-  h1, h3 {
-    text-align: center;
+  h3 {
+    text-transform: uppercase;
+    font-size: 26px;
   }
 
   section {
@@ -157,7 +172,9 @@
     margin: 0;
   }
 
-  .new {
+  .new,
+  .again,
+  .continue {
     display: block;
     margin: 0 auto;
     margin-top: 20px;
@@ -174,6 +191,35 @@
     letter-spacing: 2px;
     background-color: #cc7420;
     color: #d8d6a4;
+  }
+
+  .again,
+  .continue {
+    width: 140px;
+  }
+
+  .new:hover,
+  .again:hover {
+    box-shadow: 0 0 3px rgba(0,0,0,.7);
+  }
+
+  .bingoOverlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    background-color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+  }
+
+  .bingoOverlay div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
 </style>
