@@ -12,12 +12,14 @@
         />
       </div>
     </section>
+    <button class="new" @click="getNewBingoCard">New Card</button>
   </div>
 </template>
 
 
 <script>
   import Square from './square';
+  import allSquares from '../squares.json';
   import bingoCardSquares from '../algorithm';
   import includes from 'lodash/includes';
   import difference from 'lodash/difference';
@@ -25,6 +27,7 @@
   import slice from 'lodash/slice';
   import intersection from 'lodash/intersection';
   import reduce from 'lodash/reduce';
+  import shuffle from 'lodash/shuffle';
 
 
 
@@ -32,6 +35,8 @@
     data() {
       return {
         bingoCardSquares,
+        // allSquares,
+        // bingoCardSquares: [],
         selected: [],
         columns: 5
       };
@@ -114,6 +119,15 @@
       },
       isSelected(square) {
         return includes(this.selected, square); // inc (array to check, is this value in array?)
+      },
+      getNewBingoCard() {
+        const blank = {
+            "name": "BLANK SQUARE",
+            "rule": ""
+          },
+          shuffled = shuffle(this.allSquares);
+
+        this.bingoCardSquares = [...slice(shuffled, 0, 12), blank, ...slice(shuffled, 12, 24)];
       }
     }
   }
@@ -121,12 +135,19 @@
 
 
 <style scoped>
+  h1 {
+    margin-top: 0;
+    padding-top: 20px;
+    font-family: 'Bungee Inline', sans-serif;
+    color: #cc7420;
+  }
+
   h1, h3 {
     text-align: center;
   }
 
   section {
-    width: 750px;
+    width: 600px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -134,6 +155,25 @@
 
   section div {
     margin: 0;
+  }
+
+  .new {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 125px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    background-color: black;
+    font-family: 'Bungee Inline', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    background-color: #cc7420;
+    color: #d8d6a4;
   }
 
 </style>

@@ -10,31 +10,30 @@ const squares = require('./squares.json'),
 
 
 function getBingoCardSquares(data) {
-  // const bingoCard = [];
+  const bingoCard = [];
 
-  const shuffled = shuffle(squares);
-  const newCard = [...slice(shuffled, 0, 12), blank, ...slice(shuffled, 12, 24)];
-  console.log(newCard);
+  // const shuffled = shuffle(squares);
+  // const newCard = [...slice(shuffled, 0, 12), blank, ...slice(shuffled, 12, 24)];
+  // console.log(newCard);
 
-  // while (bingoCard.length !== 25) {
-  //   const randomIndex = Math.floor(Math.random() * data.length);
-  //   let duplicate = false;
-  //
-  //   for (let i = 0; i < bingoCard.length; i++) {
-  //     console.log(data[randomIndex].name);
-  //     if (bingoCard[i].name === data[randomIndex].name) {
-  //       duplicate = true;
-  //     }
-  //   }
-  //
-  //   if (!duplicate) {
-  //     bingoCard.push(data[randomIndex]);
-  //   }
-  //   console.log(bingoCard);
-  // }
-  // return bingoCard;
+  while (bingoCard.length !== 25) {
+    const randomIndex = Math.floor(Math.random() * data.length);
+    let duplicate = false;
 
-  return newCard;
+    for (let i = 0; i < bingoCard.length; i++) {
+      if (bingoCard[i].name === data[randomIndex].name) {
+        duplicate = true;
+      }
+    }
+
+    if (!duplicate) {
+      bingoCard.push(data[randomIndex]);
+    }
+    // console.log(bingoCard);
+  }
+  return bingoCard;
+
+  // return newCard;
 }
 
 
