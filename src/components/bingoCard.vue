@@ -3,17 +3,17 @@
     <router-link to="/">
       <h1>B-Movie Bingo</h1>
     </router-link>
-    <div v-show="hasBingo"
+    <div v-show="hasBingo && !this.gotABingo"
       class="bingoOverlay"
     >
       <div>
         <h3>You got a Bingo!</h3>
-        <button class="continue"
-          @click=""
-        >
+        <button class="continue" @click="gotABingo = true">
           Continue
         </button>
-        <button class="again">New game</button>
+        <button class="again" @click="getNewBingoCard">
+          New game
+        </button>
       </div>
     </div>
     <section>
@@ -34,7 +34,6 @@
 <script>
   import Square from './square';
   import allSquares from '../squares.json';
-  import bingoCardSquares from '../algorithm';
   import includes from 'lodash/includes';
   import difference from 'lodash/difference';
   import chunk from 'lodash/chunk';
@@ -48,11 +47,11 @@
   export default {
     data() {
       return {
-        // bingoCardSquares,
         allSquares,
         bingoCardSquares: [],
         selected: [],
-        columns: 5
+        columns: 5,
+        gotABingo: false
       };
     },
     components: {
@@ -145,6 +144,7 @@
           shuffled = shuffle(this.allSquares);
 
         this.bingoCardSquares = [...slice(shuffled, 0, 12), blank, ...slice(shuffled, 12, 24)];
+        this.selected = [];
       }
     }
   }
@@ -204,7 +204,8 @@
   }
 
   .new:hover,
-  .again:hover {
+  .again:hover,
+  .continue:hover {
     box-shadow: 0 0 3px rgba(0,0,0,.7);
   }
 
