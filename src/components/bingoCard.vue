@@ -18,7 +18,7 @@
 
 <script>
   import Square from './square';
-  import bingoCardSquares from '../../../algorithm';
+  import bingoCardSquares from '../algorithm';
   import includes from 'lodash/includes';
   import difference from 'lodash/difference';
   import chunk from 'lodash/chunk';
