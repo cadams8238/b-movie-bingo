@@ -46,9 +46,9 @@
   export default {
     data() {
       return {
-        bingoCardSquares,
-        // allSquares,
-        // bingoCardSquares: [],
+        // bingoCardSquares,
+        allSquares,
+        bingoCardSquares: [],
         selected: [],
         columns: 5
       };
@@ -56,21 +56,24 @@
     components: {
       Square
     },
+    mounted() {
+      // this.getNewBingoCard();
+    },
     computed: {
       listOfAllRows() {
         return chunk(this.bingoCardSquares, this.columns);
       },
       rows() {
-        return slice(this.listOfAllRows, 0, this.columns);
+        return slice(this.listOfAllRows, 0, this.listOfAllRows.length);
       },
       diagionalSquares() {
         const leftDiag = [],
               rightDiag = [];
 
-        for (let i=0; i < this.columns; i++) {
+        for (let i=0; i < this.listOfAllRows.length; i++) {
           leftDiag.push(this.listOfAllRows[i][i].name);
         }
-        for (let i=this.columns-1, rowCount=0; i >= 0; i--, rowCount++) {
+        for (let i=this.listOfAllRows.length-1, rowCount=0; i >= 0; i--, rowCount++) {
           const square = this.listOfAllRows[rowCount][i];
           rightDiag.push(square.name);
         }
@@ -83,7 +86,7 @@
       },
       rowSquares() {
         const rows = [];
-        for (let i=0; i < this.columns; i++) {
+        for (let i=0; i < this.listOfAllRows.length; i++) {
           const row = this.listOfAllRows[i],
                 rowNames = row.map(obj => obj.name);
           rows.push(rowNames);
@@ -97,7 +100,7 @@
       },
       columnSquares() {
         const columns = [];
-        for (let i=0; i < this.columns; i++) {
+        for (let i=0; i < this.listOfAllRows.length; i++) {
           const column = this.listOfAllRows.map(row => row[i].name)
 
           columns.push(column);
