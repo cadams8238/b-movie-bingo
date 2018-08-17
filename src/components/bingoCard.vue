@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>B-Movie Bingo</h1>
+    <router-link to="/">
+      <h1>B-Movie Bingo</h1>
+    </router-link>
     <div v-show="hasBingo"
       class="bingoOverlay"
     >
@@ -57,7 +59,7 @@
       Square
     },
     mounted() {
-      // this.getNewBingoCard();
+      this.getNewBingoCard();
     },
     computed: {
       listOfAllRows() {
@@ -223,6 +225,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  :link {
+    text-decoration: none;
   }
 
 </style>

@@ -1,23 +1,13 @@
 <template>
   <div id="app">
-    <Card />
+    <router-view />
   </div>
 </template>
 
 <script>
-import Card from './components/bingoCard';
-
-export default {
-  name: 'app',
-  components: {
-    Card
-  },
-  data () {
-    return {
-
-    }
+  export default {
+    name: 'app'
   }
-}
 </script>
 
 <style scoped>
