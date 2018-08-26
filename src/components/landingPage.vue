@@ -13,6 +13,19 @@
     <div class="plumStripe"></div>
     <div class="triangle"></div>
 
+    <h2>How to Play</h2>
+    <section class="greyBackground">
+      <!-- Replace with img -->
+      <div class="blackCircle"></div>
+      <h3></h3>
+    </section>
+
+    <section class="blackBackground">
+      <!-- Replace with img -->
+      <div class="greyCircle"></div>
+      <h3></h3>
+    </section>
+
     <!-- <router-link to="/bingo">
       <button>Play game</button>
     </router-link> -->
@@ -58,9 +71,10 @@ plum: #25125D
 
   h1 {
     color: #E6E6E6;
-    font-size: 2.5em;
-    font-style: italic;
+    font-size: 2.25em;
+    font-family: 'Raleway';
     font-weight: 600;
+    font-style: italic;
     line-height: 1;
     margin: 0;
   }
@@ -109,6 +123,52 @@ plum: #25125D
     position: absolute;
     right: 0;
     top: 47vh;
+  }
+
+  h2 {
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-style: italic;
+    font-size: 2em;
+    margin: 0;
+    margin-left: 15px;
+    margin-top: 21vh;
+    line-height: 1;
+  }
+
+  section {
+    padding-top: 10vh;
+  }
+
+  .blackCircle,
+  .greyCircle {
+    margin: 0 auto;
+    /* margin-top: 10vh; */
+    height: 30vh;
+    width: 30vh;
+    border-radius: 50%;
+  }
+
+  .blackCircle {
+    background-color: #141414;
+  }
+
+  .greyCircle {
+    background-color: #CDCED0;
+  }
+
+  .blackBackground,
+  .greyBackground {
+    height: 100vh;
+
+  }
+
+  .greyBackground {
+    background-color: #CDCED0;
+  }
+
+  .blackBackground {
+    background-color: #141414;
   }
 
   /* div {
