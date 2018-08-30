@@ -151,7 +151,7 @@ plum: #25125D
 
   .play {
     width: 125px;
-    height: 37px;
+    height: 35px;
     background-color: transparent;
     border: 1px solid #141414;
     color: #141414;
