@@ -15,15 +15,24 @@
 
     <h2>How to Play</h2>
     <section class="greyBackground">
-      <!-- Replace with img -->
-      <div class="blackCircle"></div>
-      <h3></h3>
+      <div class="content">
+        <img src="../assets/movieWatchin.svg" alt="Watching a movie" />
+        <h3>Grab some friends &amp; put on a B movie</h3>
+      </div>
     </section>
 
     <section class="blackBackground">
-      <!-- Replace with img -->
-      <div class="greyCircle"></div>
-      <h3></h3>
+      <div class="content">
+        <img src="../assets/beefcake.svg" alt="Beefcake" />
+        <h3>Look out for popular B movie cliches &amp; mark them on your bingo card!</h3>
+      </div>
+    </section>
+
+    <section class="greyBackground">
+      <div class="content">
+        <img src="../assets/blankSquare.svg" alt="Blank square" />
+        <h3>Blank square is NOT a free space!!</h3>
+      </div>
     </section>
 
     <!-- <router-link to="/bingo">
@@ -129,38 +138,18 @@ plum: #25125D
     font-family: 'Raleway';
     font-weight: 600;
     font-style: italic;
-    font-size: 2em;
+    font-size: 2em;np
     margin: 0;
     margin-left: 15px;
     margin-top: 21vh;
+    margin-bottom: 0;
     line-height: 1;
-  }
-
-  section {
-    padding-top: 10vh;
-  }
-
-  .blackCircle,
-  .greyCircle {
-    margin: 0 auto;
-    /* margin-top: 10vh; */
-    height: 30vh;
-    width: 30vh;
-    border-radius: 50%;
-  }
-
-  .blackCircle {
-    background-color: #141414;
-  }
-
-  .greyCircle {
-    background-color: #CDCED0;
   }
 
   .blackBackground,
   .greyBackground {
-    height: 100vh;
-
+    /* height: 100vh; */
+    padding-top: 10vh;
   }
 
   .greyBackground {
@@ -170,6 +159,35 @@ plum: #25125D
   .blackBackground {
     background-color: #141414;
   }
+
+  .content {
+    width: 80%;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    height: 50%;
+    border-radius: 50%;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 2em;
+    font-style: italic;
+    padding: 10vh 0;
+    margin: 0;
+  }
+
+  .blackBackground h3 {
+    color: #CDCED0;
+  }
+
+
+
+
 
   /* div {
     width: 100vw;
