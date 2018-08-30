@@ -152,9 +152,12 @@ plum: #25125D
   .play {
     width: 125px;
     height: 37px;
-    background-color: #141414;
+    background-color: transparent;
+    border: 1px solid #141414;
+    color: #141414;
+    /* background-color: #141414;
     color: #CDCED0;
-    border: none;
+    border: none; */
     font-size: .85em;
     text-transform: capitalize;
     margin-left: 20px;
@@ -165,6 +168,7 @@ plum: #25125D
   .play:hover {
     background: linear-gradient(#CE422F 5%, #141414 35%);
     transform: scale(1.1);
+    color: #CDCED0;
   }
 
   h2 {
