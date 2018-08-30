@@ -202,6 +202,7 @@ plum: #25125D
     background: linear-gradient(#CE422F 5%, #141414 35%);
     transform: scale(1.1);
     color: #CDCED0;
+    border: none;
   }
 
   h2 {
