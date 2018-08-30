@@ -40,7 +40,40 @@
       </div>
     </section>
 
+    <section class="blackBackground">
+      <div class="content">
+        <!-- <img class="instructionImg" src="../assets/beefcake.svg" alt="Beefcake" /> -->
+        <h3>First to get a bingo gets bragging rights!</h3>
+      </div>
+    </section>
 
+    <section class="greyBackground">
+      <div class="content">
+        <h3 class="videoHeader">Here are some training videos to help get you started</h3>
+        <div class="video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/NSrXq85eAwU?rel=0"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/5t4vQjw30_A?rel=0"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <h3>Enjoy!</h3>
 
     <footer>
       <div>
@@ -201,6 +234,7 @@ plum: #25125D
     width: 80%;
     max-width: 450px;
     margin: 0 auto;
+    box-sizing: border-box;
     /* border: 1px solid black; */
   }
 
@@ -226,7 +260,7 @@ plum: #25125D
   footer {
     background-color: #141414;
     color: #CE422F;
-    height: 30vh;
+    height: 23vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -242,7 +276,7 @@ plum: #25125D
   }
 
   footer div {
-    margin-top: 20vh;
+    margin-top: 15vh;
   }
 
   footer div:first-child {
@@ -270,6 +304,17 @@ plum: #25125D
     right: 20px;
   }
 
+  .video iframe {
+    width: 100%;
+  }
+
+  iframe {
+    margin-bottom: 20px;
+  }
+
+  .videoHeader {
+    padding-top: 0;
+  }
 
 
 
