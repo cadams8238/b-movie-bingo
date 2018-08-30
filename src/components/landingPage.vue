@@ -39,6 +39,18 @@
       <button>Play game</button>
     </router-link> -->
 
+    <footer>
+      <div>
+        <p>Website created by:</p>
+        <p>Courtney Adams</p>
+        <!-- <a href="http://coadams.me">coadams.me</a> -->
+      </div>
+      <div>
+        <p>Game created by:</p>
+        <a target="_blank" href="http://bmoviebingo.com/">Wolf Choir LLC</a>
+      </div>
+    </footer>
+
   </div>
 </template>
 
@@ -74,7 +86,7 @@ plum: #25125D
   }
 
   header {
-    margin-left: 15px;
+    margin-left: 20px;
     padding-top: 19vh;
   }
 
@@ -140,7 +152,7 @@ plum: #25125D
     font-style: italic;
     font-size: 2em;np
     margin: 0;
-    margin-left: 15px;
+    margin-left: 20px;
     margin-top: 21vh;
     margin-bottom: 0;
     line-height: 1;
@@ -162,6 +174,7 @@ plum: #25125D
 
   .content {
     width: 80%;
+    max-width: 450px;
     margin: 0 auto;
     /* border: 1px solid black; */
   }
@@ -184,6 +197,45 @@ plum: #25125D
   .blackBackground h3 {
     color: #CDCED0;
   }
+
+  footer {
+    background-color: #141414;
+    color: #CE422F;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  footer a {
+    color: #CE422F;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  footer div {
+    margin-top: 20vh;
+  }
+
+  footer div:first-child {
+    margin-left: 20px;
+  }
+
+  footer div:last-child {
+    margin-right: 20px;
+  }
+
+  footer p:first-child {
+    font-size: .75em;
+  }
+
+  footer p {
+    margin: 0;
+  }
+
 
 
 
