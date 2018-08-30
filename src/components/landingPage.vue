@@ -14,6 +14,10 @@
     <div class="plumStripe"></div>
     <div class="triangle"></div>
 
+    <router-link to="/bingo">
+      <button class="play">Play game</button>
+    </router-link>
+
     <h2>How to Play</h2>
     <section class="greyBackground">
       <div class="content">
@@ -36,9 +40,7 @@
       </div>
     </section>
 
-    <!-- <router-link to="/bingo">
-      <button>Play game</button>
-    </router-link> -->
+
 
     <footer>
       <div>
@@ -147,6 +149,24 @@ plum: #25125D
     top: 47vh;
   }
 
+  .play {
+    width: 125px;
+    height: 37px;
+    background-color: #141414;
+    color: #CDCED0;
+    border: none;
+    font-size: .85em;
+    text-transform: capitalize;
+    margin-left: 20px;
+    margin-top: 3vh;
+    transition: all 0.07s;
+  }
+
+  .play:hover {
+    background: linear-gradient(#CE422F 5%, #141414 35%);
+    transform: scale(1.1);
+  }
+
   h2 {
     font-family: 'Raleway';
     font-weight: 600;
@@ -154,7 +174,7 @@ plum: #25125D
     font-size: 2em;np
     margin: 0;
     margin-left: 20px;
-    margin-top: 21vh;
+    margin-top: 13vh;
     margin-bottom: 0;
     line-height: 1;
   }
