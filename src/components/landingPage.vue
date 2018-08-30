@@ -2,6 +2,7 @@
   <div class="background">
     <div class="black">
       <header>
+        <img src="../assets/vhs.svg" alt="vhs icon"/>
         <h1>B-Movie</h1>
         <h1>Bingo</h1>
       </header>
@@ -16,21 +17,21 @@
     <h2>How to Play</h2>
     <section class="greyBackground">
       <div class="content">
-        <img src="../assets/movieWatchin.svg" alt="Watching a movie" />
+        <img class="instructionImg" src="../assets/movieWatchin.svg" alt="Watching a movie" />
         <h3>Grab some friends &amp; put on a B movie</h3>
       </div>
     </section>
 
     <section class="blackBackground">
       <div class="content">
-        <img src="../assets/beefcake.svg" alt="Beefcake" />
+        <img class="instructionImg" src="../assets/beefcake.svg" alt="Beefcake" />
         <h3>Look out for popular B movie cliches &amp; mark them on your bingo card!</h3>
       </div>
     </section>
 
     <section class="greyBackground">
       <div class="content">
-        <img src="../assets/blankSquare.svg" alt="Blank square" />
+        <img class="instructionImg" src="../assets/blankSquare.svg" alt="Blank square" />
         <h3>Blank square is NOT a free space!!</h3>
       </div>
     </section>
@@ -76,7 +77,7 @@ plum: #25125D
 
   .background {
     background-color: #CDCED0;
-    height: 100vh;
+    /* height: 100vh; */
     position: relative;
   }
 
@@ -179,11 +180,11 @@ plum: #25125D
     /* border: 1px solid black; */
   }
 
-  img {
+  .instructionImg {
     display: block;
     margin: 0 auto;
     height: 50%;
-    border-radius: 50%;
+    /* border-radius: 50%; */
   }
 
   h3 {
@@ -234,6 +235,15 @@ plum: #25125D
 
   footer p {
     margin: 0;
+  }
+
+  header img {
+    width: 10vw;
+    min-width: 75px;
+    max-width: 150px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 
 
