@@ -73,7 +73,12 @@
       </div>
     </section>
 
-    <h3>Enjoy!</h3>
+    <!-- <h3>Enjoy!</h3> -->
+    <div class="bottomPage">
+      <router-link to="/bingo">
+        <button class="play">Play game</button>
+      </router-link>
+    </div>
 
     <footer>
       <div>
@@ -182,15 +187,13 @@ plum: #25125D
     top: 47vh;
   }
 
-  .play {
+  .play,
+  .playBottomPage {
     width: 125px;
     height: 35px;
     background-color: transparent;
     border: 1px solid #141414;
     color: #141414;
-    /* background-color: #141414;
-    color: #CDCED0;
-    border: none; */
     font-size: .85em;
     text-transform: capitalize;
     margin-left: 20px;
@@ -258,6 +261,13 @@ plum: #25125D
     color: #CDCED0;
   }
 
+  .bottomPage {
+    /* display: block;
+    margin: 0 auto; */
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
   footer {
     background-color: #141414;
     color: #CE422F;
@@ -317,47 +327,19 @@ plum: #25125D
     padding-top: 0;
   }
 
+  @media screen and (min-width: 800px) {
+    header {
+      padding-top: 15vh;
+    }
 
+    h1 {
+      font-size: 3em;
+    }
 
-
-
-  /* div {
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-  } */
-
-  /* h1 {
-    margin: 0;
-    padding-top: 65px;
-    font-family: 'Bungee Inline', sans-serif;
-    font-size: 45px;
-    color: #cc7420;
-  } */
-
-  /* button {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 125px;
-    height: 30px;
-    padding: 5px;
-    border-radius: 15px;
-    border: none;
-    color: white;
-    background-color: black;
-    font-family: 'Bungee Inline', sans-serif;
-    font-size: 12px;
-    letter-spacing: 2px;
-    background-color: #cc7420;
-    color: #d8d6a4;
+    h1:last-child {
+      font-size: 6em;
+    }
   }
 
-  button:hover {
-    cursor: pointer;
-  }
-
-  :link {
-    text-decoration: none;
-  } */
 
 </style>
