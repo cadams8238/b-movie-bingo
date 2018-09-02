@@ -49,7 +49,7 @@
       <!-- </div> -->
     </section>
 
-    <section class="greyBackground">
+    <section class="greyBackground verticalFlex">
       <h3 class="videoHeader">Here are some training videos to help get you started</h3>
       <div class="content flex">
         <div class="video">
@@ -73,14 +73,15 @@
           ></iframe>
         </div>
       </div>
+      <div class="bottomPage">
+        <router-link to="/bingo">
+          <button class="play">Play game</button>
+        </router-link>
+      </div>
     </section>
 
     <!-- <h3>Enjoy!</h3> -->
-    <div class="bottomPage">
-      <router-link to="/bingo">
-        <button class="play">Play game</button>
-      </router-link>
-    </div>
+
 
     <footer>
       <div>
@@ -189,8 +190,7 @@ plum: #25125D
     top: 47vh;
   }
 
-  .play,
-  .playBottomPage {
+  .play {
     width: 125px;
     height: 35px;
     background-color: transparent;
@@ -198,8 +198,8 @@ plum: #25125D
     color: #141414;
     font-size: .85em;
     text-transform: capitalize;
-    margin-left: 20px;
-    margin-top: 3vh;
+    /* margin-left: 20px;
+    margin-top: 3vh; */
     transition: all 0.07s;
   }
 
@@ -280,7 +280,8 @@ plum: #25125D
 
   .bottomPage {
     text-align: center;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 10vh;
   }
 
   footer {
@@ -392,6 +393,13 @@ plum: #25125D
 
     .video {
       width: 100%;
+      margin-top: 10vh;
+    }
+
+    .verticalFlex {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
 
