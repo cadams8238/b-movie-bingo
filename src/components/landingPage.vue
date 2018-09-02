@@ -314,7 +314,7 @@ plum: #25125D
   .videoHeader {
     padding-top: 0;
     width: 60%;
-    margin: 0 auto;
+    margin: 35px auto;
   }
 
   footer {
@@ -403,6 +403,10 @@ plum: #25125D
     h3 {
       width: 40vw;
       margin-right: 10vw;
+    }
+
+    .videoHeader {
+      margin: 0 auto;
     }
 
     .video {
