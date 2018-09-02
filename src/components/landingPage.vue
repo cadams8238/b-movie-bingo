@@ -15,7 +15,7 @@
     <div class="triangle"></div>
 
     <router-link to="/bingo">
-      <button class="play">Play game</button>
+      <button class="play firstPlayButton">Play game</button>
     </router-link>
 
     <h2>
@@ -129,6 +129,15 @@ plum: #25125D
     height: 37vh;
   }
 
+  header img {
+    width: 10vw;
+    min-width: 75px;
+    max-width: 150px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
   header {
     margin-left: 20px;
     padding-top: 19vh;
@@ -210,6 +219,11 @@ plum: #25125D
     border: none;
   }
 
+  .firstPlayButton {
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+
   h2 {
     font-family: 'Raleway';
     font-weight: 600;
@@ -284,6 +298,25 @@ plum: #25125D
     margin-bottom: 10vh;
   }
 
+  .video {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+
+  .video iframe {
+    width: 100%;
+  }
+
+  iframe {
+    margin-bottom: 20px;
+  }
+
+  .videoHeader {
+    padding-top: 0;
+    width: 60%;
+    margin: 0 auto;
+  }
+
   footer {
     background-color: #141414;
     color: #CE422F;
@@ -322,28 +355,9 @@ plum: #25125D
     margin: 0;
   }
 
-  header img {
-    width: 10vw;
-    min-width: 75px;
-    max-width: 150px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
 
-  .video iframe {
-    width: 100%;
-  }
 
-  iframe {
-    margin-bottom: 20px;
-  }
 
-  .videoHeader {
-    padding-top: 0;
-    width: 60%;
-    margin: 0 auto;
-  }
 
   @media screen and (min-width: 600px) {
     .instructionImg,
@@ -394,6 +408,14 @@ plum: #25125D
     .video {
       width: 100%;
       margin-top: 10vh;
+    }
+
+    .video:first-child {
+      margin-right: 0;
+    }
+
+    .video:last-child {
+      margin-left: 25px;
     }
 
     .verticalFlex {
