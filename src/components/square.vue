@@ -30,9 +30,9 @@
     height: 75px;
     padding: 5px;
     font-size: 9px;
-    background-color: #141414;
-    color: #E6E6E6;
-    border: .5px solid #E6E6E6;
+    background-color: #E6E6E6;
+    color: #141414;
+    border: .5px solid #141414;
   }
 
   .square:hover {
@@ -41,13 +41,13 @@
 
   .square:hover,
   .square:focus {
-    border: 2px solid #CC4CAD;
+    border: 3px solid #CC4CAD;
     outline: none;
     z-index: 5;
   }
 
   .selected {
-    background-color: #4B1A8F;
+    background-color: #760DBA;
     /* color: #aabba3; */
   }
 

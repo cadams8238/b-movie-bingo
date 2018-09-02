@@ -1,13 +1,17 @@
 <template>
   <div>
     <router-link to="/">
-      <h1>B-Movie Bingo</h1>
+      <header>
+        <img src="../assets/vhs.svg" alt="vhs icon"/>
+        <h1>B-Movie Bingo</h1>
+      </header>
     </router-link>
+
     <div v-show="hasBingo && !this.gotABingo"
       class="bingoOverlay"
     >
       <div>
-        <h3>You got a Bingo!</h3>
+        <h2>You got a Bingo!</h2>
         <button class="continue" @click="gotABingo = true">
           Continue
         </button>
@@ -152,16 +156,33 @@
 
 
 <style scoped>
-  h1, h3 {
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 270px;
+    margin: 0 auto;
+    /* border: 1px solid white; */
+  }
+
+  header img {
+    width: 50px;
+    margin-right: 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h1, h2 {
     margin-top: 0;
     padding-top: 20px;
-    font-family: 'Bungee Inline', sans-serif;
-    color: #cc7420;
+    color: #CDCED0;
     text-align: center;
 
   }
 
-  h3 {
+  h2 {
     text-transform: uppercase;
     font-size: 26px;
   }
@@ -186,16 +207,12 @@
     margin-bottom: 20px;
     width: 125px;
     height: 30px;
-    padding: 5px;
     border-radius: 15px;
     border: none;
-    color: white;
-    background-color: black;
-    font-family: 'Bungee Inline', sans-serif;
     font-size: 12px;
-    letter-spacing: 2px;
-    background-color: #cc7420;
-    color: #d8d6a4;
+    letter-spacing: 1px;
+    background-color: #CE422F;
+    color: #141414;
   }
 
   .again,
@@ -206,7 +223,7 @@
   .new:hover,
   .again:hover,
   .continue:hover {
-    box-shadow: 0 0 3px rgba(0,0,0,.7);
+    box-shadow: 0 0 1px 1px rgba(255,255,255,.8);
   }
 
   .bingoOverlay {
@@ -217,7 +234,7 @@
     left: 0;
     top: 0;
     overflow-x: hidden; /* Disable horizontal scroll */
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(0,0,0, 0.85);
     text-align: center;
   }
 

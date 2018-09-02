@@ -116,6 +116,7 @@ magenta: #9B19CC
 electric purple: #760DBA
 purple: #4B1A8F
 plum: #25125D
+red: #CE422F
  */
 
   .background {
