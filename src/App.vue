@@ -15,7 +15,7 @@
     margin: 0;
     height: 100%;
     font-family: 'Lato', sans-serif;
-    background-color: #d8d6a4;
+    background-color: #141414;
   }
 
 </style>

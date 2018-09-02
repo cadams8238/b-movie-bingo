@@ -167,7 +167,7 @@
   }
 
   section {
-    width: 600px;
+    width: 375px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -230,6 +230,12 @@
 
   :link {
     text-decoration: none;
+  }
+
+  @media screen and (min-width: 800px) {
+    section {
+      width: 600px;
+    }
   }
 
 </style>

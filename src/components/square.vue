@@ -1,5 +1,6 @@
 <template>
   <button
+    class="square"
     @click="buttonClick"
   >
     {{ label }}
@@ -23,25 +24,40 @@
 
 
 <style>
-  button {
+  .square {
     box-sizing: border-box;
-    width: 120px;
-    height: 120px;
-    padding: 10px;
-    font-size: 14px;
-    background-color: #aabba3;
-    color: #864e1b;
-    border: 1px solid #d8d6a4;
+    width: 75px;
+    height: 75px;
+    padding: 5px;
+    font-size: 9px;
+    background-color: #141414;
+    color: #E6E6E6;
+    border: .5px solid #E6E6E6;
   }
 
-  button:hover {
+  .square:hover {
     cursor: pointer;
   }
 
-  .selected {
-    background-color: #864e1b;
-    color: #aabba3;
+  .square:hover,
+  .square:focus {
+    border: 2px solid #CC4CAD;
+    outline: none;
+    z-index: 5;
+  }
 
+  .selected {
+    background-color: #4B1A8F;
+    /* color: #aabba3; */
+  }
+
+  @media screen and (min-width: 800px) {
+    .square {
+      width: 120px;
+      height: 120px;
+      padding: 10px;
+      font-size: 14px;
+    }
   }
 
 </style>
