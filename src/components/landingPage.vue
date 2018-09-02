@@ -18,8 +18,10 @@
       <button class="play">Play game</button>
     </router-link>
 
-    <h2>How to Play</h2>
-    <section class="greyBackground">
+    <h2>
+      <a href="#" v-scroll-to="'#instructions'">How to Play</a>
+    </h2>
+    <section class="greyBackground" id="instructions">
       <!-- <div class="content"> -->
         <img class="instructionImg" src="../assets/movieWatchin.svg" alt="Watching a movie" />
         <h3>Grab some friends &amp; put on a B movie</h3>
@@ -218,6 +220,15 @@ plum: #25125D
     margin-top: 13vh;
     margin-bottom: 0;
     line-height: 1;
+  }
+
+  h2 a {
+    color: #141414;
+    text-decoration: none;
+  }
+
+  h2 a:hover {
+    color: #CE422F;
   }
 
   .blackBackground,
