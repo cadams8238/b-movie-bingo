@@ -21,28 +21,28 @@
     <h2>
       <a href="#" v-scroll-to="'#instructions'">How to Play</a>
     </h2>
-    <section class="greyBackground" id="instructions">
+    <section class="greyBackground flex" id="instructions">
       <!-- <div class="content"> -->
         <img class="instructionImg" src="../assets/movieWatchin.svg" alt="Watching a movie" />
         <h3>Grab some friends &amp; put on a B movie</h3>
       <!-- </div> -->
     </section>
 
-    <section class="blackBackground">
+    <section class="blackBackground flex">
       <!-- <div class="content"> -->
         <img class="instructionImg" src="../assets/beefcake.svg" alt="Beefcake" />
         <h3>Look out for popular B movie cliches &amp; mark them on your bingo card!</h3>
       <!-- </div> -->
     </section>
 
-    <section class="greyBackground">
+    <section class="greyBackground flex">
       <!-- <div class="content"> -->
         <img class="instructionImg" src="../assets/blankSquare.svg" alt="Blank square" />
         <h3>Blank square is NOT a free space!!</h3>
       <!-- </div> -->
     </section>
 
-    <section class="blackBackground">
+    <section class="blackBackground flex">
       <!-- <div class="content"> -->
         <!-- <img class="instructionImg" src="../assets/beefcake.svg" alt="Beefcake" /> -->
         <h3>First to get a bingo gets bragging rights!</h3>
@@ -51,7 +51,7 @@
 
     <section class="greyBackground">
       <h3 class="videoHeader">Here are some training videos to help get you started</h3>
-      <div class="content">
+      <div class="content flex">
         <div class="video">
           <iframe
             width="560"
@@ -233,11 +233,7 @@ plum: #25125D
 
   .blackBackground,
   .greyBackground {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    min-height: 100vh;
   }
 
   .greyBackground {
@@ -246,6 +242,13 @@ plum: #25125D
 
   .blackBackground {
     background-color: #141414;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
   }
 
   /* .content {
@@ -257,7 +260,7 @@ plum: #25125D
   .instructionImg {
     display: block;
     margin: 0 auto;
-    padding: 0 20px;
+    /* padding: 0 20px; */
     width: 80vw;
     max-width: 450px;
   }
@@ -267,7 +270,8 @@ plum: #25125D
     font-size: 2em;
     font-style: italic;
     padding-top: 5vh;
-    margin: 0;
+    margin: 0 auto;
+    width: 80vw;
   }
 
   .blackBackground h3 {
@@ -341,12 +345,13 @@ plum: #25125D
   }
 
   @media screen and (min-width: 600px) {
-    .instructionImg {
+    .instructionImg,
+    h3 {
       width: 60vw;
     }
   }
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 800px) {
     header {
       padding-top: 15vh;
     }
@@ -359,15 +364,13 @@ plum: #25125D
       font-size: 6em;
     }
 
-    .greyBackground,
-    .blackBackground {
+    .flex {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
       align-content: space-around;
-      padding-bottom: 10vh;
-      /* border: 1px solid black; */
+      padding-bottom: 0;
     }
 
     /* .content h3 {
@@ -378,7 +381,12 @@ plum: #25125D
     .instructionImg {
       width: 40vw;
       /* height: 50vh; */
-      margin-left: 0;
+      margin-left: 10vw;
+      margin-right: 10vw;
+    }
+
+    h3 {
+      width: 40vw;
       margin-right: 10vw;
     }
 
