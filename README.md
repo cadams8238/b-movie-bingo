@@ -1,18 +1,26 @@
-# bingo
+# B Movie Bingo
+Make watching B Movies more enjoyable with B Movie Bingo. [^1] [See Live App](https://modest-euler-8d4601.netlify.com/)
 
-> A Vue.js project
+## How to Play
+Plug in a B Movie and watch with your friends. Look out for popular B Movie cliches and mark them off on your card when you see them in action!
 
-## Build Setup
+Remember, the Blank Square is NOT a free space! It's something that's:
+  1. Something you've never seen in a movie before
+  2. It's completely unexpected
+  3. Has no context in the movie
 
-``` bash
-# install dependencies
-npm install
+[^1]: Game created by Wolf Choir LLC [bmoviebingo.com](http://bmoviebingo.com/)
 
-# serve with hot reload at localhost:8080
-npm run dev
+**Enjoy the game!**
 
-# build for production with minification
-npm run build
-```
+## Desktop View
+  ![Desktop](./src/assets/readme/desktop.png)
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Mobile View
+  ![Mobile](./src/assets/readme/mobile.png)
+
+## Tech Stack
+    VueJS
+    Vue Router
+    HTML
+    CSS
