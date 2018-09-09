@@ -25,7 +25,8 @@
 
 <style>
   .square {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     width: 75px;
     height: 75px;
     padding: 5px;

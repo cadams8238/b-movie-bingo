@@ -157,9 +157,16 @@
 
 <style scoped>
   header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 270px;
     margin: 0 auto;
     /* border: 1px solid white; */
@@ -190,8 +197,12 @@
   section {
     width: 375px;
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   section div {
@@ -223,7 +234,8 @@
   .new:hover,
   .again:hover,
   .continue:hover {
-    box-shadow: 0 0 1px 1px rgba(255,255,255,.8);
+    -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8);
+            box-shadow: 0 0 1px 1px rgba(255,255,255,.8);
   }
 
   .bingoOverlay {
@@ -242,7 +254,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 
   :link {
