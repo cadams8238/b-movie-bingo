@@ -466,5 +466,73 @@ red: #CE422F
     }
   }
 
+  /* High res phones */
+  @media only screen and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (min-resolution: 192dpi) and
+  (min-width: 400px) and
+  (max-width: 2000px) and
+  (orientation: portrait) {
+    header img {
+      width: 10vw;
+      min-width: 150px;
+      max-width: 300px;
+    }
+
+    header {
+      padding-top: 19vh;
+    }
+
+    h1 {
+      font-size: 5em;
+    }
+
+    h1:last-child {
+      font-size: 10em;
+    }
+
+    .play {
+      width: 250px;
+      height: 70px;
+      font-size: 1.5em;
+    }
+
+    h2 {
+      font-size: 4em;
+      border: 1px solid white;
+
+    }
+
+    .flex {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .instructionImg {
+      width: 80vw;
+      max-width: 900px;
+      border: 1px solid white;
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 4em;
+      width: 80vw;
+      border: 1px solid white;
+
+    }
+  }
+
+  /* High res tablets */
+  /* @media only screen and
+  (-webkit-min-device-pixel-ratio: 2) and
+  (min-resolution: 192dpi) and
+  (min-width: 1000px) and
+  (orientation: portrait) {
+    header {
+      padding-top: 19vh;
+    }
+  } */
+
 
 </style>
