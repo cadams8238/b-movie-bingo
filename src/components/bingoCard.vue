@@ -149,6 +149,7 @@
 
         this.bingoCardSquares = [...slice(shuffled, 0, 12), blank, ...slice(shuffled, 12, 24)];
         this.selected = [];
+        this.gotABingo = false;
       }
     }
   }
