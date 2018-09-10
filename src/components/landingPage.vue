@@ -541,7 +541,7 @@ red: #CE422F
   @media only screen and
   (-webkit-min-device-pixel-ratio: 2) and
   (min-resolution: 192dpi) and
-  (min-width: 400px) and
+  (min-width: 600px) and
   (orientation: portrait) {
     header img {
       width: 10vw;
@@ -631,22 +631,22 @@ red: #CE422F
     }
 
     h1 {
-      font-size: 7em;
+      font-size: 6em;
     }
 
     h1:last-child {
-      font-size: 15em;
+      font-size: 13em;
     }
 
     .play {
-      width: 400px;
-      height: 150px;
+      width: 350px;
+      height: 110px;
       font-size: 2.5em;
     }
 
     h2,
     h3 {
-      font-size: 7.5em;
+      font-size: 6em;
     }
 
     .instructionImg {
