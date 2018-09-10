@@ -61,4 +61,22 @@
     }
   }
 
+  @media screen and (min-width: 1200px) {
+    .square {
+      width: 150px;
+      height: 150px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (min-width: 2000px) {
+    .square {
+      width: 200px;
+      height: 200px;
+      padding: 10px;
+      font-size: 18px;
+    }
+  }
+
 </style>

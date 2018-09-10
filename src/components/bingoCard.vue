@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="all-content">
     <router-link to="/">
       <header>
         <img src="../assets/vhs.svg" alt="vhs icon"/>
@@ -157,16 +157,9 @@
 
 <style scoped>
   header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: row;
+    align-items: center;
     width: 270px;
     margin: 0 auto;
     /* border: 1px solid white; */
@@ -197,12 +190,8 @@
   section {
     width: 375px;
     margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
 
   section div {
@@ -234,8 +223,7 @@
   .new:hover,
   .again:hover,
   .continue:hover {
-    -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8);
-            box-shadow: 0 0 1px 1px rgba(255,255,255,.8);
+    box-shadow: 0 0 1px 1px rgba(255,255,255,.8);
   }
 
   .bingoOverlay {
@@ -254,8 +242,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 
   :link {
@@ -265,6 +252,22 @@
   @media screen and (min-width: 800px) {
     section {
       width: 600px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    section {
+      width: 750px;
+    }
+  }
+
+  @media screen and (min-width: 2000px) {
+    section {
+      width: 1000px;
+    }
+
+    .all-content {
+      margin-top: 200px;
     }
   }
 
