@@ -466,6 +466,31 @@ red: #CE422F
     }
   }
 
+  @media screen and (min-width: 1400px) {
+    /* header {
+      padding-top: 22vh;
+    } */
+    h1 {
+      font-size: 4em;
+    }
+
+    h1:last-child {
+      font-size: 9em;
+    }
+
+    .play {
+      width: 175px;
+      height: 45px;
+      font-size: 1em;
+    }
+
+    h2,
+    h3 {
+      font-size: 3em;
+    }
+
+  }
+
   /* High res phones, tablets */
   @media only screen and
   (-webkit-min-device-pixel-ratio: 2) and
@@ -549,9 +574,7 @@ red: #CE422F
   (min-resolution: 192dpi) and
   (min-width: 2001px) and
   (orientation: portrait) {
-    /* header {
-      padding-top: 19vh;
-    } */
+
   }
 
 
