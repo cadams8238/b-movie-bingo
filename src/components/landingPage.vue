@@ -482,11 +482,11 @@ red: #CE422F
 
   @media screen and (min-width: 1400px) {
     h1 {
-      font-size: 4em;
+      font-size: 3em;
     }
 
     h1:last-child {
-      font-size: 9em;
+      font-size: 7em;
     }
 
     .play {
@@ -497,7 +497,7 @@ red: #CE422F
 
     h2,
     h3 {
-      font-size: 3em;
+      font-size: 2.5em;
     }
   }
 
