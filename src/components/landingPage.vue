@@ -278,11 +278,11 @@ red: #CE422F
         align-content: center;
   }
 
-  /* .content {
+  .content {
     width: 80vw;
     margin: 0 auto;
     box-sizing: border-box;
-  } */
+  }
 
   .instructionImg {
     display: block;
@@ -466,12 +466,12 @@ red: #CE422F
     }
   }
 
-  /* High res phones */
+  /* High res phones, tablets */
   @media only screen and
   (-webkit-min-device-pixel-ratio: 2) and
   (min-resolution: 192dpi) and
   (min-width: 400px) and
-  (max-width: 2000px) and
+  /* (max-width: 2000px) and */
   (orientation: portrait) {
     header img {
       width: 10vw;
@@ -499,8 +499,7 @@ red: #CE422F
 
     h2 {
       font-size: 4em;
-      border: 1px solid white;
-
+      /* border: 1px solid white; */
     }
 
     .flex {
@@ -511,28 +510,49 @@ red: #CE422F
     .instructionImg {
       width: 80vw;
       max-width: 900px;
-      border: 1px solid white;
+      /* border: 1px solid white; */
     }
 
     h3 {
       text-align: center;
       font-size: 4em;
       width: 80vw;
-      border: 1px solid white;
+      /* border: 1px solid white; */
+    }
 
+    .video {
+      margin: 0;
+    }
+
+    .video iframe:first-child {
+      margin-top: 50px;
+    }
+
+    .video iframe {
+      margin-bottom: 50px;
+      height: 450px;
+    }
+
+    footer p,
+    footer a {
+      font-size: 2em;
+    }
+
+    footer p:first-child {
+      font-size: 1em;
     }
   }
 
-  /* High res tablets */
-  /* @media only screen and
+  /* High res desktops */
+  @media only screen and
   (-webkit-min-device-pixel-ratio: 2) and
   (min-resolution: 192dpi) and
-  (min-width: 1000px) and
+  (min-width: 2001px) and
   (orientation: portrait) {
-    header {
+    /* header {
       padding-top: 19vh;
-    }
-  } */
+    } */
+  }
 
 
 </style>
