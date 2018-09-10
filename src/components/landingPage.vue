@@ -281,7 +281,8 @@ red: #CE422F
   .content {
     width: 80vw;
     margin: 0 auto;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 
   .instructionImg {
@@ -539,9 +540,13 @@ red: #CE422F
   /* High res phones, tablets */
   @media only screen and
   (-webkit-min-device-pixel-ratio: 2) and
+  (min-width: 400px) and
+  (orientation: portrait),
+
+  only screen and
+  (-webkit-min-device-pixel-ratio: 2) and
   (min-resolution: 192dpi) and
   (min-width: 400px) and
-  /* (max-width: 2000px) and */
   (orientation: portrait) {
     header img {
       width: 10vw;
@@ -573,8 +578,13 @@ red: #CE422F
     }
 
     .flex {
-      flex-direction: column;
-      justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
     }
 
     .instructionImg {
@@ -616,7 +626,11 @@ red: #CE422F
   /* High res desktops */
   @media only screen and
   (-webkit-min-device-pixel-ratio: 2) and
-  (min-resolution: 192dpi) and
+  (min-width: 2000px) and
+  (min-resolution: 192dpi),
+
+  only screen and
+  (-webkit-min-device-pixel-ratio: 2) and
   (min-width: 2000px) {
     header img {
       width: 10vw;
