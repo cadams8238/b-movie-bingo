@@ -467,9 +467,6 @@ red: #CE422F
   }
 
   @media screen and (min-width: 1400px) {
-    /* header {
-      padding-top: 22vh;
-    } */
     h1 {
       font-size: 4em;
     }
@@ -488,7 +485,55 @@ red: #CE422F
     h3 {
       font-size: 3em;
     }
+  }
 
+  @media screen and (min-width: 2000px) {
+    header img {
+      width: 10vw;
+      min-width: 150px;
+      max-width: 300px;
+    }
+
+    h1 {
+      font-size: 7em;
+    }
+
+    h1:last-child {
+      font-size: 15em;
+    }
+
+    .play {
+      width: 350px;
+      height: 100px;
+      font-size: 2em;
+    }
+
+    h2,
+    h3 {
+      font-size: 6em;
+    }
+
+    .instructionImg {
+      width: 50vw;
+      max-width: 850px;
+    }
+
+    .video iframe {
+      height: 500px;
+    }
+
+    .bottomPage button {
+      margin-top: 75px;
+    }
+
+    footer p,
+    footer a {
+      font-size: 3em;
+    }
+
+    footer p:first-child {
+      font-size: 1.5em;
+    }
   }
 
   /* High res phones, tablets */
