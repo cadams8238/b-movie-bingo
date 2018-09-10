@@ -376,9 +376,22 @@ red: #CE422F
     margin: 0;
   }
 
+  @media screen and (min-width: 300px) {
+    header {
+      padding-top: 21vh;
+    }
 
-
-
+    .triangle {
+      width: 0;
+      height: 0;
+      border-top: 13vh solid transparent;
+      border-bottom: 13vh solid transparent;
+      border-right: 13vh solid #141414;
+      position: absolute;
+      right: 0;
+      top: 50vh;
+    }
+  }
 
   @media screen and (min-width: 600px) {
     .instructionImg,
