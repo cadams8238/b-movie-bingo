@@ -617,9 +617,53 @@ red: #CE422F
   @media only screen and
   (-webkit-min-device-pixel-ratio: 2) and
   (min-resolution: 192dpi) and
-  (min-width: 2001px) and
-  (orientation: portrait) {
+  (min-width: 2000px) {
+    header img {
+      width: 10vw;
+      min-width: 200px;
+      max-width: 400px;
+    }
 
+    h1 {
+      font-size: 8em;
+    }
+
+    h1:last-child {
+      font-size: 16em;
+    }
+
+    .play {
+      width: 400px;
+      height: 150px;
+      font-size: 2.5em;
+    }
+
+    h2,
+    h3 {
+      font-size: 7.5em;
+    }
+
+    .instructionImg {
+      width: 50vw;
+      max-width: 1100px;
+    }
+
+    .video iframe {
+      height: 700px;
+    }
+
+    .bottomPage button {
+      margin-top: 175px;
+    }
+
+    footer p,
+    footer a {
+      font-size: 4em;
+    }
+
+    footer p:first-child {
+      font-size: 2em;
+    }
   }
 
 
