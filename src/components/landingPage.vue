@@ -44,7 +44,7 @@
 
     <section class="blackBackground flex">
       <!-- <div class="content"> -->
-        <!-- <img class="instructionImg" src="../assets/beefcake.svg" alt="Beefcake" /> -->
+        <img class="instructionImg" src="../assets/bingo.svg" alt="Bingo" />
         <h3>First to get a bingo gets bragging rights!</h3>
       <!-- </div> -->
     </section>
@@ -86,8 +86,7 @@
     <footer>
       <div>
         <p>Website created by:</p>
-        <p>Courtney Adams</p>
-        <!-- <a href="http://coadams.me">coadams.me</a> -->
+        <a href="http://coadams.me">Courtney Adams</a>
       </div>
       <div>
         <p>Game created by:</p>
