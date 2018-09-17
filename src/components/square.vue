@@ -79,9 +79,9 @@
     }
   }
 
-  @media screen and (min-width: 800px) and (max-width: 1400px),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
+  @media screen and (min-width: 800px) and (max-width: 1400px) and (min-height: 1200px),
+    (-webkit-min-device-pixel-ratio: 2) and
+    (min-resolution: 192dpi) and
     (orientation: portrait) {
       .square {
         width: 175px;
