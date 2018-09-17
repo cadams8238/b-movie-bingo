@@ -24,22 +24,38 @@
     <section class="greyBackground flex" id="instructions">
       <h2>How to Play:</h2>
       <img class="instructionImg" src="../assets/movieWatchin.svg" alt="Watching a movie" />
-      <h3>Grab some friends &amp; put on a B movie</h3>
+      <div class="allText">
+        <h3>Grab some friends &amp; put on a B movie</h3>
+        <p>Need recommendations? Try:</p>
+        <p>Trancers, Dead Heat, Miami Connection, Hard Target, Samauri Cop</p>
+      </div>
     </section>
 
     <section class="blackBackground flex">
       <img class="instructionImg" src="../assets/beefcake.svg" alt="Beefcake" />
-      <h3>Look out for popular B movie cliches &amp; mark them on your bingo card!</h3>
+      <div class="allText">
+        <h3>Look out for popular B movie cliches &amp; mark them on your bingo card!</h3>
+      </div>
     </section>
 
     <section class="greyBackground flex">
       <img class="instructionImg" src="../assets/blankSquare.svg" alt="Blank square" />
-      <h3>Blank square is NOT a free space!!</h3>
+      <div class="allText">
+        <h3>Blank square is NOT a free space!!</h3>
+        <p>It's something that's:</p>
+        <ol>
+          <li>Never been seen in a movie before</li>
+          <li>Completely unexpected</li>
+          <li>Has no context in the movie</li>
+        </ol>
+      </div>
     </section>
 
     <section class="blackBackground flex">
       <img class="instructionImg" src="../assets/bingo.svg" alt="Bingo" />
-      <h3>First to get a bingo gets bragging rights!</h3>
+      <div class="allText">
+        <h3>First to get a bingo gets bragging rights!</h3>
+      </div>
     </section>
 
     <section class="greyBackground verticalFlex">
@@ -177,7 +193,7 @@ red: #CE422F
 
   .plumStripe {
     background-color: #25125D;
-    margin-bottom: 5vh;
+    margin-bottom: 15vh;
   }
 
   .triangle {
@@ -271,14 +287,21 @@ red: #CE422F
     max-width: 450px;
   }
 
-  h3 {
+  .allText {
+    margin: 0 auto;
+    margin-bottom: 5vh;
+    width: 80vw;
     text-align: center;
+  }
+
+  h3 {
     font-size: 2em;
     font-style: italic;
-    padding-top: 5vh;
-    margin: 0 auto;
-    width: 80vw;
   }
+/*
+  .allText p:first-child {
+    font-weight: bold;
+  } */
 
   .blackBackground h3 {
     color: #CDCED0;
@@ -373,7 +396,7 @@ red: #CE422F
 
   @media screen and (min-width: 600px) {
     .instructionImg,
-    h3 {
+    .allText {
       width: 60vw;
     }
   }
@@ -427,7 +450,7 @@ red: #CE422F
       margin-right: 10vw;
     }
 
-    h3 {
+    .allText {
       width: 40vw;
       margin-right: 10vw;
     }
@@ -591,11 +614,13 @@ red: #CE422F
       /* border: 1px solid white; */
     }
 
-    h3 {
-      text-align: center;
-      font-size: 4em;
+    .allText {
       width: 80vw;
-      /* border: 1px solid white; */
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 4em;
     }
 
     .videoHeader {
