@@ -2,7 +2,13 @@
   <div class="background">
     <div class="black">
       <header>
-        <img src="../assets/vhs.svg" alt="vhs icon"/>
+        <!-- <img src="../assets/vhs.svg" alt="vhs icon"/> -->
+        <nav>
+          <a href="#" v-scroll-to="'#instructions'">How to Play</a>
+          <router-link to="/bingo">
+            <button class="play">Play game</button>
+          </router-link>
+        </nav>
         <h1>B-Movie</h1>
         <h1>Bingo</h1>
       </header>
@@ -14,39 +20,27 @@
     <div class="plumStripe"></div>
     <div class="triangle"></div>
 
-    <router-link to="/bingo">
-      <button class="play firstPlayButton">Play game</button>
-    </router-link>
 
-    <h2>
-      <a href="#" v-scroll-to="'#instructions'">How to Play</a>
-    </h2>
+
     <section class="greyBackground flex" id="instructions">
-      <!-- <div class="content"> -->
-        <img class="instructionImg" src="../assets/movieWatchin.svg" alt="Watching a movie" />
-        <h3>Grab some friends &amp; put on a B movie</h3>
-      <!-- </div> -->
+      <h2>How to Play</h2>
+      <img class="instructionImg" src="../assets/movieWatchin.svg" alt="Watching a movie" />
+      <h3>Grab some friends &amp; put on a B movie</h3>
     </section>
 
     <section class="blackBackground flex">
-      <!-- <div class="content"> -->
-        <img class="instructionImg" src="../assets/beefcake.svg" alt="Beefcake" />
-        <h3>Look out for popular B movie cliches &amp; mark them on your bingo card!</h3>
-      <!-- </div> -->
+      <img class="instructionImg" src="../assets/beefcake.svg" alt="Beefcake" />
+      <h3>Look out for popular B movie cliches &amp; mark them on your bingo card!</h3>
     </section>
 
     <section class="greyBackground flex">
-      <!-- <div class="content"> -->
-        <img class="instructionImg" src="../assets/blankSquare.svg" alt="Blank square" />
-        <h3>Blank square is NOT a free space!!</h3>
-      <!-- </div> -->
+      <img class="instructionImg" src="../assets/blankSquare.svg" alt="Blank square" />
+      <h3>Blank square is NOT a free space!!</h3>
     </section>
 
     <section class="blackBackground flex">
-      <!-- <div class="content"> -->
-        <img class="instructionImg" src="../assets/bingo.svg" alt="Bingo" />
-        <h3>First to get a bingo gets bragging rights!</h3>
-      <!-- </div> -->
+      <img class="instructionImg" src="../assets/bingo.svg" alt="Bingo" />
+      <h3>First to get a bingo gets bragging rights!</h3>
     </section>
 
     <section class="greyBackground verticalFlex">
@@ -79,9 +73,6 @@
         </router-link>
       </div>
     </section>
-
-    <!-- <h3>Enjoy!</h3> -->
-
 
     <footer>
       <div>
@@ -187,6 +178,7 @@ red: #CE422F
 
   .plumStripe {
     background-color: #25125D;
+    margin-bottom: 5vh;
   }
 
   .triangle {
@@ -203,50 +195,46 @@ red: #CE422F
   .play {
     width: 125px;
     height: 35px;
-    background-color: transparent;
-    border: 1px solid #141414;
+    background-color: #CE422F;
+    border: none;
     color: #141414;
     font-size: .85em;
-    text-transform: capitalize;
-    /* margin-left: 20px;
-    margin-top: 3vh; */
+    text-transform: uppercase;
     -webkit-transition: all 0.07s;
     transition: all 0.07s;
   }
 
   .play:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #CE422F), color-stop(35%, #141414));
-    background: linear-gradient(#CE422F 5%, #141414 35%);
+    /* background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #CE422F), color-stop(35%, #141414));
+    background: linear-gradient(#CE422F 5%, #141414 35%); */
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     color: #CDCED0;
-    border: none;
   }
 
-  .firstPlayButton {
-    margin-left: 20px;
-    margin-top: 30px;
+  nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+    display: flex;
+  }
+
+  nav a {
+    align-self: center;
+    margin-right: 20px;
+    color: #CDCED0;
+    text-decoration: none;
+    /* text-transform: uppercase; */
   }
 
   h2 {
     font-family: 'Raleway';
     font-weight: 600;
-    font-style: italic;
+    /* font-style: italic; */
     font-size: 2em;
-    margin: 0;
-    margin-left: 20px;
-    margin-top: 13vh;
-    margin-bottom: 0;
-    line-height: 1;
-  }
-
-  h2 a {
-    color: #141414;
-    text-decoration: none;
-  }
-
-  h2 a:hover {
-    color: #CE422F;
+    text-align: center;
+    margin-bottom: 30px;
   }
 
   .blackBackground,
@@ -287,7 +275,6 @@ red: #CE422F
   .instructionImg {
     display: block;
     margin: 0 auto;
-    /* padding: 0 20px; */
     width: 80vw;
     max-width: 450px;
   }
