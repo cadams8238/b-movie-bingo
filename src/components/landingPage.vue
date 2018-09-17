@@ -193,7 +193,7 @@ red: #CE422F
 
   .plumStripe {
     background-color: #25125D;
-    margin-bottom: 15vh;
+    margin-bottom: 18vh;
   }
 
   .triangle {
@@ -613,6 +613,10 @@ red: #CE422F
       width: 250px;
       height: 70px;
       font-size: 1.75em;
+    }
+
+    .plumStripe {
+      margin-bottom: 15vh;
     }
 
     h2 {
