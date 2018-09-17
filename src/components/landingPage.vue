@@ -539,19 +539,16 @@ red: #CE422F
   }
 
   /* High res phones, tablets */
-  @media only screen and
-  (-webkit-min-device-pixel-ratio: 2) and
-  (min-resolution: 192dpi) and
-  (min-width: 600px) and
+  @media only screen and (min-width: 800px) and (max-width: 1400px),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
   (orientation: portrait) {
-    header img {
-      width: 10vw;
-      min-width: 150px;
-      max-width: 300px;
-    }
-
     header {
       padding-top: 19vh;
+    }
+
+    header a:first-child {
+      font-size: 1.75em;
     }
 
     h1 {
@@ -565,12 +562,17 @@ red: #CE422F
     .play {
       width: 250px;
       height: 70px;
-      font-size: 1.5em;
+      font-size: 1.75em;
     }
 
     h2 {
       font-size: 4em;
-      /* border: 1px solid white; */
+    }
+
+    #instructions h2 {
+      position: relative;
+      top: 0;
+      right: 0;
     }
 
     .flex {
