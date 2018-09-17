@@ -26,7 +26,7 @@
       <img class="instructionImg" src="../assets/movieWatchin.svg" alt="Watching a movie" />
       <div class="allText">
         <h3>Grab some friends &amp; put on a B movie</h3>
-        <p>Need recommendations? Try:</p>
+        <p class="subDirectionsHeading">Need recommendations? Try:</p>
         <p>Trancers, Dead Heat, Miami Connection, Hard Target, Samauri Cop</p>
       </div>
     </section>
@@ -42,7 +42,7 @@
       <img class="instructionImg" src="../assets/blankSquare.svg" alt="Blank square" />
       <div class="allText">
         <h3>Blank square is NOT a free space!!</h3>
-        <p>It's something that's:</p>
+        <p class="subDirectionsHeading">It's something that's:</p>
         <ol>
           <li>Never been seen in a movie before</li>
           <li>Completely unexpected</li>
@@ -298,10 +298,15 @@ red: #CE422F
     font-size: 2em;
     font-style: italic;
   }
-/*
-  .allText p:first-child {
-    font-weight: bold;
-  } */
+
+  .subDirectionsHeading {
+    font-family: 'Raleway';
+    font-weight: 600;
+    margin-top: 20%;
+    margin-bottom: 0;
+  }
+
+
 
   .blackBackground h3 {
     color: #CDCED0;
