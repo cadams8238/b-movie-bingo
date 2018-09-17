@@ -23,7 +23,7 @@
 
 
     <section class="greyBackground flex" id="instructions">
-      <h2>How to Play</h2>
+      <h2>How to Play:</h2>
       <img class="instructionImg" src="../assets/movieWatchin.svg" alt="Watching a movie" />
       <h3>Grab some friends &amp; put on a B movie</h3>
     </section>
@@ -205,8 +205,6 @@ red: #CE422F
   }
 
   .play:hover {
-    /* background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #CE422F), color-stop(35%, #141414));
-    background: linear-gradient(#CE422F 5%, #141414 35%); */
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     color: #CDCED0;
@@ -231,7 +229,6 @@ red: #CE422F
   h2 {
     font-family: 'Raleway';
     font-weight: 600;
-    /* font-style: italic; */
     font-size: 2em;
     text-align: center;
     margin-bottom: 30px;
@@ -263,13 +260,6 @@ red: #CE422F
             justify-content: center;
     -ms-flex-line-pack: center;
         align-content: center;
-  }
-
-  .content {
-    width: 80vw;
-    margin: 0 auto;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
   }
 
   .instructionImg {
@@ -416,16 +406,21 @@ red: #CE422F
       -ms-flex-line-pack: distribute;
           align-content: space-around;
       padding-bottom: 0;
+      position: relative;
     }
 
-    /* .content h3 {
-      text-align: left;
-      width: 40vw;
-    } */
+    .plumStripe {
+      margin-bottom: 10vh;
+    }
+
+    #instructions h2 {
+      position: absolute;
+      top: 20vh;
+      right: 20%;
+    }
 
     .instructionImg {
       width: 40vw;
-      /* height: 50vh; */
       margin-left: 10vw;
       margin-right: 10vw;
     }
