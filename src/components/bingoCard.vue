@@ -281,7 +281,7 @@
       }
 
       header {
-        width: 42%;
+        width: 45%;
       }
 
       header img {

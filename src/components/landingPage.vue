@@ -539,9 +539,9 @@ red: #CE422F
   }
 
   /* High res phones, tablets */
-  @media only screen and (min-width: 800px) and (max-width: 1400px),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
+  @media only screen and (min-width: 800px) and (max-width: 1200px) and (min-height: 1200px),
+  (-webkit-min-device-pixel-ratio: 2) and
+  (min-resolution: 192dpi) and
   (orientation: portrait) {
     header {
       padding-top: 19vh;
