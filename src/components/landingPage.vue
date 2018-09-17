@@ -2,7 +2,6 @@
   <div class="background">
     <div class="black">
       <header>
-        <!-- <img src="../assets/vhs.svg" alt="vhs icon"/> -->
         <nav>
           <a href="#" v-scroll-to="'#instructions'">How to Play</a>
           <router-link to="/bingo">
@@ -223,7 +222,10 @@ red: #CE422F
     margin-right: 20px;
     color: #CDCED0;
     text-decoration: none;
-    /* text-transform: uppercase; */
+  }
+
+  nav a:first-child:hover {
+    text-decoration: underline;
   }
 
   h2 {
@@ -468,6 +470,11 @@ red: #CE422F
 
     h1:last-child {
       font-size: 7em;
+    }
+
+    header a:first-child {
+      font-size: 1.25em;
+      margin-right: 40px;
     }
 
     .play {
