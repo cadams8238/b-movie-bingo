@@ -539,7 +539,7 @@ red: #CE422F
   }
 
   /* High res phones, tablets */
-  @media only screen and (min-width: 800px) and (max-width: 1200px) and (min-height: 1200px),
+  @media only screen and (min-width: 800px) and (max-width: 1400px) and (min-height: 1200px),
   (-webkit-min-device-pixel-ratio: 2) and
   (min-resolution: 192dpi) and
   (orientation: portrait) {
@@ -596,6 +596,10 @@ red: #CE422F
       font-size: 4em;
       width: 80vw;
       /* border: 1px solid white; */
+    }
+
+    .videoHeader {
+      margin-top: 10%;
     }
 
     .video {
