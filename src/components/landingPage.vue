@@ -27,7 +27,7 @@
       <div class="allText">
         <h3>Grab some friends &amp; put on a B movie</h3>
         <p class="subDirectionsHeading">Need recommendations? Try:</p>
-        <p>Trancers, Dead Heat, Miami Connection, Hard Target, Samauri Cop</p>
+        <p class="subDirections">Trancers, Dead Heat, Miami Connection, Hard Target, Samauri Cop</p>
       </div>
     </section>
 
@@ -39,7 +39,7 @@
     </section>
 
     <section class="greyBackground flex">
-      <img class="instructionImg" src="../assets/blankSquare.svg" alt="Blank square" />
+      <img class="instructionImg blankSquareImg" src="../assets/blankSquare.svg" alt="Blank square" />
       <div class="allText">
         <h3>Blank square is NOT a free space!!</h3>
         <p class="subDirectionsHeading">It's something that's:</p>
@@ -297,6 +297,7 @@ red: #CE422F
   h3 {
     font-size: 2em;
     font-style: italic;
+    text-align: center;
   }
 
   .subDirectionsHeading {
@@ -306,7 +307,15 @@ red: #CE422F
     margin-bottom: 0;
   }
 
+  .subDirections {
+    margin-top: 0;
+  }
 
+  ol {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+  }
 
   .blackBackground h3 {
     color: #CDCED0;
@@ -397,6 +406,10 @@ red: #CE422F
       right: 0;
       top: 50vh;
     }
+
+    .blankSquareImg {
+      margin-top: 5vh;
+    }
   }
 
   @media screen and (min-width: 600px) {
@@ -453,6 +466,10 @@ red: #CE422F
       width: 40vw;
       margin-left: 10vw;
       margin-right: 10vw;
+    }
+
+    .blankSquareImg {
+      margin-top: 0;
     }
 
     .allText {
@@ -514,6 +531,11 @@ red: #CE422F
     h2,
     h3 {
       font-size: 2.5em;
+    }
+
+    p,
+    li {
+      font-size: 1.25em;
     }
   }
 
@@ -619,9 +641,18 @@ red: #CE422F
       /* border: 1px solid white; */
     }
 
+    .blankSquareImg {
+      margin-top: 5vh;
+    }
+
     .allText {
       width: 80vw;
       text-align: center;
+    }
+
+    p,
+    li {
+      font-size: 1.75em;
     }
 
     h3 {
