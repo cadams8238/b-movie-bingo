@@ -272,4 +272,42 @@
     }
   }
 
+  @media screen and (min-width: 800px) and (max-width: 1400px),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      .all-content {
+        margin-top: 5vh;
+      }
+
+      header {
+        width: 42%;
+      }
+
+      header img {
+        width: 85px;
+      }
+
+      h1,
+      h2 {
+        font-size: 3em;
+      }
+
+      section {
+        width: 875px;
+      }
+
+      .new,
+      .again,
+      .continue {
+        width: 275px;
+        height: 70px;
+        font-size: 1.75em;
+        border-radius: 35px;
+      }
+
+      .continue {
+        margin-bottom: 40px;
+      }
+  }
+
 </style>

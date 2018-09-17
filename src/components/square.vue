@@ -79,4 +79,14 @@
     }
   }
 
+  @media screen and (min-width: 800px) and (max-width: 1400px),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+      .square {
+        width: 175px;
+        height: 250px;
+        font-size: 1.75em;
+      }
+  }
+
 </style>
