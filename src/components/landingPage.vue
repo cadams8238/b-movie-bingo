@@ -590,7 +590,7 @@ red: #CE422F
 
   /* High res phones, tablets */
   @media only screen and (min-width: 800px) and (max-width: 1400px) and (min-height: 1200px),
-  (-webkit-min-device-pixel-ratio: 2) and
+  (-webkit-min-device-pixel-ratio: 2.5) and
   (min-resolution: 192dpi) and
   (orientation: portrait) {
     header {
