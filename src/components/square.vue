@@ -12,7 +12,6 @@
   export default {
     props: [
       'label'
-      // 'isSelected'
     ],
     methods: {
       buttonClick() {

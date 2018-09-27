@@ -66,10 +66,10 @@
     },
     computed: {
       listOfAllRows() {
-        return chunk(this.bingoCardSquares, this.columns);
+        return chunk(this.bingoCardSquares, this.columns); // chunk (array to process, length of each chunk)
       },
       rows() {
-        return slice(this.listOfAllRows, 0, this.listOfAllRows.length);
+        return slice(this.listOfAllRows, 0, this.listOfAllRows.length); // slice (array to slice, start, end)
       },
       diagionalSquares() {
         const leftDiag = [],
@@ -86,7 +86,7 @@
       },
       isDiagBingo() {
         return this.diagionalSquares.map(diag => (
-          intersection(diag, this.selected).length === this.columns ? 1 : 0
+          intersection(diag, this.selected).length === this.columns ? 1 : 0 // inter (arrays to compare -> returns array of shared values)
         ));
       },
       rowSquares() {
@@ -100,7 +100,7 @@
       },
       isRowBingo() {
         return this.rowSquares.map(row => (
-          intersection(row, this.selected).length === this.columns ? 1 : 0
+          intersection(row, this.selected).length === this.columns ? 1 : 0 // inter (arrays to compare -> returns array of shared values)
         ));
       },
       columnSquares() {
@@ -114,13 +114,13 @@
       },
       isColBingo() {
         return this.columnSquares.map(col => (
-          intersection(col, this.selected).length === this.columns ? 1 : 0
+          intersection(col, this.selected).length === this.columns ? 1 : 0 // inter (arrays to compare -> returns array of shared values)
         ));
       },
       hasBingo() {
         const reducer = (sum, value) => sum + value;
 
-        if (reduce(this.isDiagBingo, reducer, 0) >= 1 ||
+        if (reduce(this.isDiagBingo, reducer, 0) >= 1 ||  // reduce (collection to iterate over, function invoked per iteration, initial value)
             reduce(this.isRowBingo, reducer, 0) >= 1 ||
             reduce(this.isColBingo, reducer, 0) >= 1) {
           return true;
